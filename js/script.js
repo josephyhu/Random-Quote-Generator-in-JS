@@ -31,14 +31,56 @@ let quotes = [
   type: "movie",
   citation: "Casablanca",
   year: 1942
+ },
+ {quote: "El Psy Kongroo.",
+  source: "Okabe Rintaro",
+  type: "visual novel",
+  citation: "Steins;Gate",
+  year: 2009
+ },
+ {quote: "Deceive the first you. Deceive the world. That is the choice to arrive at the 'Steins Gate.'",
+  source: "Okabe Rintaro",
+  type: "visual novel",
+  citation: "Steins;Gate",
+  year: 2009
+ },
+ {quote: "I am mad scientist. It's so cool. Son of a bitch.",
+  source: "Okabe Rintaro",
+  type: "anime",
+  citation: "Steins;Gate",
+  year: 2011
+ },
+ {quote: "Explosion!",
+  source: "Megumin",
+  type: "anime",
+  citation: "KonoSuba: God's Blessing on This Wonderful World!",
+  year: 2016
+ },
+ {quote: "War is peace. Freedom is slavery. Ignorance is strength.",
+  source: "George Orwell",
+  type: "book",
+  citation: "Nineteen Eighty-Four",
+  year: 1949
+ },
+ {quote: "All animals are equal, but some animals are more equal than others.",
+  source: "George Orwell",
+  type: "book",
+  citation: "Animal Farm",
+  year: 1945
+ },
+ {quote: "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.",
+  source: "J. R. R. Tolkien",
+  type: "book",
+  citation: "The Lord of the Rings",
+  year: 1954
  }
 ];
 
 function getRandomQuote(array) {
-  return array[Math.floor(Math.random() * 5)];
+  return array[Math.floor(Math.random() * quotes.length)];
 }
 
-function getQuotes() {
+function formatQuote() {
   let quoteObj = getRandomQuote(quotes);
   let string = "";
   string += "<p class='quote'>" + quoteObj.quote + "</p>";
@@ -73,4 +115,4 @@ function displayColor() {
 }
 
 document.getElementsByTagName('body')[0].style.background = displayColor();
-printQuote(getQuotes());
+printQuote(formatQuote());
