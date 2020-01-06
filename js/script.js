@@ -1,7 +1,7 @@
 let red;
 let green;
 let blue;
-let quotes = [
+const quotes = [
   {quote: "Frankly, my dear, I don't give a damn.",
    source: "Rhett Butler",
    type: "movie",
@@ -76,11 +76,9 @@ let quotes = [
  }
 ];
 
-function getRandomQuote(array) {
-  return array[Math.floor(Math.random() * quotes.length)];
-}
+const getRandomQuote = array => array[Math.floor(Math.random() * quotes.length)];
 
-function formatQuote() {
+const formatQuote = () => {
   let quoteObj = getRandomQuote(quotes);
   let string = "";
   string += "<p class='quote'>" + quoteObj.quote + "</p>";
@@ -98,16 +96,14 @@ function formatQuote() {
   return string;
 }
 
-function printQuote(quote) {
+const printQuote = quote => {
   let div = document.getElementById('quote-box');
   div.innerHTML = quote;
 }
 
-function color() {
-  return Math.floor(Math.random() * 89);
-}
+const color = () => Math.floor(Math.random() * 89);
 
-function displayColor() {
+const displayColor = () => {
   red = color();
   green = color();
   blue = color();
