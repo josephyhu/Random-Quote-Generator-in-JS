@@ -32,6 +32,12 @@ const quotes = [
   citation: "Casablanca",
   year: 1942
  },
+ {quote: "People die when they're kiled.",
+  source: "Emiya Shirou",
+  type: "visual novel",
+  citation: "Fate/stay night",
+  year: 2004
+ },
  {quote: "El Psy Kongroo.",
   source: "Okabe Rintaro",
   type: "visual novel",
