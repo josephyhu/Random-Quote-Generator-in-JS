@@ -32,6 +32,30 @@ const quotes = [
   citation: "Casablanca",
   year: 1942
  },
+ {quote: "All right, Mr. DeMille, I'm ready for my close-up.",
+  source: "Norma Desmond",
+  type: "movie",
+  citation: "Sunset Boulevard",
+  year: 1950
+ },
+ {quote: "May the Force be with you.",
+  source: "Han Solo",
+  type: "movie",
+  citation: "Star Wars",
+  year: 1977
+ },
+ {quote: "Fasten your seatbelts. It's going to be a bumpy night.",
+  source: "Margo Channing",
+  type: "movie",
+  citation: "All About Eve",
+  year: 1950
+ },
+ {quote: "You talkin' to me?",
+  source: "Travis Bickle",
+  type: "movie",
+  citation: "Taxi Driver",
+  year: 1976
+ },
  {quote: "People die when they're kiled.",
   source: "Emiya Shirou",
   type: "visual novel",
