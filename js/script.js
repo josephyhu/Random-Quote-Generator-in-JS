@@ -114,7 +114,7 @@ const quotes = [
 
 const getRandomQuote = array => array[Math.floor(Math.random() * quotes.length)];
 
-const displayQuote = () => {
+const printQuote = () => {
   let quoteObj = getRandomQuote(quotes);
   let string = "";
   string += "<p class='quote'>" + quoteObj.quote + "</p>";
@@ -129,10 +129,10 @@ const displayQuote = () => {
     string += "<span class='year'>" + quoteObj.year + "</span>";
   }
   string += "</p>";
-  return string;
+  document.getElementById('quote-box').innerHTML = string;
 }
 
-const displayCustomQuote = () => {
+const printCustomQuote = () => {
   let string = "";
   string += "<p class='quote'>" + quote + "</p>";
   string += "<p class='source'>" + source;
@@ -146,12 +146,7 @@ const displayCustomQuote = () => {
     string += "<span class='year'>" + year + "</span>";
   }
   string += "</p>";
-  return string;
-}
-
-const printQuote = quote => {
-  let div = document.getElementById('quote-box');
-  div.innerHTML = quote;
+  document.getElementById('quote-box').innerHTML = string;
 }
 
 const color = () => Math.floor(Math.random() * 89);
@@ -164,7 +159,7 @@ const displayColor = () => {
 }
 
 document.getElementsByTagName('body')[0].style.background = displayColor();
-printQuote(displayQuote());
+printQuote();
 
 customQuote.addEventListener('click', () => {
   quote = prompt("Enter a custom quote.");
@@ -172,5 +167,5 @@ customQuote.addEventListener('click', () => {
   type = prompt("Enter the type.");
   citation = prompt("Enter the citation.");
   year = prompt("Enter the year.");
-  printQuote(displayCustomQuote());
+  printCustomQuote();
 });
