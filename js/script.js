@@ -1,12 +1,6 @@
 let red;
 let green;
 let blue;
-let quote;
-let source;
-let type;
-let citation;
-let year;
-const customQuote = document.querySelector('#customQuote');
 const quotes = [
   {quote: "Frankly, my dear, I don't give a damn.",
    source: "Rhett Butler",
@@ -132,23 +126,6 @@ const printQuote = () => {
   document.getElementById('quote-box').innerHTML = string;
 }
 
-const printCustomQuote = () => {
-  let string = "";
-  string += "<p class='quote'>" + quote + "</p>";
-  string += "<p class='source'>" + source;
-  if (type) {
-    string += "<span class='type'>" + type + "</span>";
-  }
-  if (citation) {
-    string += "<span class='citation'>" + citation + "</span>";
-  }
-  if (year) {
-    string += "<span class='year'>" + year + "</span>";
-  }
-  string += "</p>";
-  document.getElementById('quote-box').innerHTML = string;
-}
-
 const color = () => Math.floor(Math.random() * 89);
 
 const displayColor = () => {
@@ -160,12 +137,3 @@ const displayColor = () => {
 
 document.getElementsByTagName('body')[0].style.background = displayColor();
 printQuote();
-
-customQuote.addEventListener('click', () => {
-  quote = prompt("Enter a custom quote.");
-  source = prompt("Enter the source.");
-  type = prompt("Enter the type.");
-  citation = prompt("Enter the citation.");
-  year = prompt("Enter the year.");
-  printCustomQuote();
-});
