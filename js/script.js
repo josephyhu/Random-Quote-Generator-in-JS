@@ -74,6 +74,12 @@ const quotes = [
   citation: "Steins;Gate",
   year: 2011
  },
+ {quote: "Meruem, King of Ants, you know nothing...of humanity's infinite potential for malice!",
+  source: "Isaac Netero",
+  type: "anime",
+  citation: "Hunter x Hunter (2011)",
+  year: 2014
+ },
  {quote: "Explosion!",
   source: "Megumin",
   type: "anime",
